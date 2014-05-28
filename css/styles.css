@@ -78,7 +78,7 @@ a.provision {
     -webkit-flex:1;
     flex:3;
 }
-#tab-container > section > div:not('.fileDetails') {
+#tab-container > section > div.drop-zone {
     opacity:0;
     z-index:-1;
     
@@ -87,13 +87,14 @@ a.provision {
     -webkit-transform-origin: center center;
     -webkit-transition-delay: 0ms;
 }
-#tab-container > section div.on {
+#tab-container > section > div.on {
     opacity:1;
     z-index:1;
-    background: linear-gradient(#fff, #eee);
+    background: #fff;
     
     -webkit-transform: scale(1) rotateY(0deg);
-    -webkit-transition-delay:200ms;
+    -webkit-transition: all 400ms ease;
+    -webkit-transition-delay:0ms;
 }
 
 /****************************************************************/
