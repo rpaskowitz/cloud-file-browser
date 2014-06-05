@@ -2,55 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Cloud File Browser Modal Window Demo</title>
+        <title>Cloud File Browser</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="../css/normalize.css" />
         <link rel="stylesheet" href="../css/font-awesome.min.css" />
         <link rel="stylesheet" href="../css/styles.css" />
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
-
         <!--[if lt IE 9]>
-          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
-        
+
         <!-- JS -->
         <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
-        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
         <script src="../lib/cloudfilebrowser.js"></script>
         <script src="../lib/provision.js"></script>
-        
+
     </head>
 
     <body>
 
-        <header>
-            <h1>Cloud File Browser</h1>
-        </header>
+    <header>
+        <h1>Cloud File Browser</h1>
+    </header>
 
-        <div id="dialog-form" title="Documents">
-            <section class="cloudFileBrowser"></section>
-        </div>
-
-        <button id="show-documents">Show Documents</button>
+    <section class="cloudFileBrowser"></section>
 
     </body>
 
     <script>
-
-        $( "#show-documents" )
-                .button()
-                .click(function() {
-                    $( "#dialog-form" ).dialog( "open" );
-                });
-
-        $( "#dialog-form" ).dialog({
-            autoOpen: false,
-            height: 800,
-            width: 850,
-            modal: true
-        });
 
         //Caller Callback function for post operations
         function mycallback(type, data) {
