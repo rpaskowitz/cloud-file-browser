@@ -55,6 +55,10 @@ a.provision {
     width: 160px;
     overflow:scroll;
 }
+.no-margin #tab-container > ul,
+.no-margin #tab-container > section {
+    margin:0 !important;
+}
 #tab-container > ul > li {
     display: block;
     padding: 10px 15px;
@@ -218,6 +222,8 @@ a.provision {
     left: 0;
     right: 0;
     bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 #services-containers > div.provisioned > div.listTable > ul {
     margin:0;
