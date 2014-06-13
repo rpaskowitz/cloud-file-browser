@@ -310,7 +310,7 @@ a.provision {
 #tab-container > #file-info {
     width:0;
     flex:none;
-    margin: 0 25px 25px -25px;
+    margin: 25px 25px 25px -25px;
     background: #666;
     box-shadow: -1px 0 3px rgba(0,0,0,.2);
     
@@ -323,6 +323,7 @@ a.provision {
     height: 200px;
     background: rgba(0,0,0,.2);
     box-shadow: inset 0 -2px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.1);
+    overflow:hidden;
 }
 #tab-container > #file-info > h2 {
     margin-left: 15px;
@@ -394,7 +395,11 @@ a.provision {
     border-radius: 5px;
     border-bottom: 1px solid rgba(0,0,0,.3);
 }
-
+#tab-container > #file-info > .preview img {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
 /**********************************/
 /* DRAG NOTIFICATION CONTAINER    */
 /**********************************/
