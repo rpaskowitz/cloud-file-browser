@@ -211,10 +211,6 @@ a.provision {
     content: '\f105';
     font-family: 'FontAwesome';
 } 
-#services-containers > div.provisioned > div.breadcrumb ul li:after {
-    content: '\f105';
-    font-family:'FontAwesome';
-}
 #services-containers > div.provisioned .addFilesButton {
     position: absolute;
     right: 10px;
