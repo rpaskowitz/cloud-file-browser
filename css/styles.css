@@ -250,10 +250,14 @@ a.provision {
     left: 0;
     right: 0;
     bottom: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
 }
-#services-containers > div.provisioned > div.listTable > ul {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel {
+    overflow-y:auto;
+    overflow-x:hidden;
+    height:100%;
+    width:100%;
+}
+#services-containers > div.provisioned > div.listTable ul {
     margin:0;
     padding:0;
     list-style:none;
@@ -270,29 +274,29 @@ a.provision {
     box-shadow: inset 0 16px 2px rgba(255,255,255,.1), 0 -1px 0 rgba(255,255,255, .3), 0 -2px 0 rgba(0,0,0,.4), 0 1px 1px rgba(0,0,0,0.5);
     border-left: 1px solid #777;
     border-right: 1px solid #333;
-    position:fixed;
+    /*position:fixed;*/
     width:100%;
-    z-index:5;
 }
 #services-containers > div.provisioned > div.listTable > ul:first-child li {
     padding: 10px 15px;
     box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.3);
 }
-#services-containers > div.provisioned > div.listTable > ul li {
+#services-containers > div.provisioned > div.listTable ul li {
     flex:1;
     text-align:left;
     padding: 10px 15px;
+    overflow:hidden;
 }
-#services-containers > div.provisioned > div.listTable > ul li:first-child {
+#services-containers > div.provisioned > div.listTable ul li:first-child {
     width:10px;
     flex:none;
 }
-#services-containers > div.provisioned > div.listTable > ul.loading {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel > ul.loading {
     opacity: .4 !important;
     background: #eee !important;
     border-bottom: 1px solid #bbb;
 }
-#services-containers > div.provisioned > div.listTable > ul:not(:first-child) {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel > ul {
     background: linear-gradient(#eee, #ddd);
     /*border-radius: 6px;*/
     /*margin: 5px 15px;*/
@@ -305,20 +309,20 @@ a.provision {
     -webkit-transition: all 250ms cubic-bezier(0.765, 0.010, 0.455, 1.305);
 
 }
-#services-containers > div.provisioned > div.listTable > ul:not(:first-child).on {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel > ul.on {
     opacity:1;
     
     -webkit-transform: rotateZ(0deg) scale(1);
     -webkit-transition: all 250ms cubic-bezier(0.765, 0.010, 0.455, 1.305);
 }
-#services-containers > div.provisioned > div.listTable > ul:not(:first-child) li:nth-child(2):before {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel > ul li:nth-child(2):before {
     content: '\f15c';
     display:inline;
     font-family: FontAwesome;
     font-size: 13px;
     margin-right: 8px;
 }
-#services-containers > div.provisioned > div.listTable > ul:not(:first-child) li.foldername:nth-child(2):before {
+#services-containers > div.provisioned > div.listTable > div.scrollPanel > ul li.foldername:nth-child(2):before {
     content: '\f07b';
 }
 /*****************************/
@@ -365,13 +369,13 @@ a.provision {
     color: #444;
     text-shadow: 0 1px 0 rgba(255,255,255,.1);
 }
-#tab-container > #file-info > .preview:after {
-    content: 'X';
+#tab-container > #file-info > .preview a.close:after {
+    content: '\f061';
     position: absolute;
-    right: 15px;
-    top: 15px;
+    left: 15px;
+    bottom: 15px;
     font-family: FontAwesome;
-    color: #666;
+    color: #fff;
     font-weight: bold;
     font-size: 80%;
     text-shadow: none;

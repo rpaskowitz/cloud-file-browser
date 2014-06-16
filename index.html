@@ -27,25 +27,6 @@
 
     <script>
 
-        //Caller Callback function for post operations
-        function mycallback(type, data) {
-            var res = '';
-            for (property in data)
-            {
-                var val = data[property];
-                if(typeof val == 'string')
-                {
-                    res += property + ':' + val+'<br>';
-                }
-                else
-                {
-                    res += property + ':' + JSON.stringify(val)+'<br>';
-                }
-            }
-
-            console.log('Callback for type ' + type + ' with response ' + res);
-        };
-
         $('.cloudFileBrowser').cloudFileBrowser({
             documents: {
                 'box': {
@@ -76,6 +57,31 @@
                 env: 'https://qa.cloud-elements.com/elements/'
             }
         });
+        
+        
+        
+        ////////////////////////////////////////////////
+        //Caller Callback function for post operations//
+        ////////////////////////////////////////////////
+        
+        function mycallback(type, data) {
+            var res = '';
+            for (property in data)
+            {
+                var val = data[property];
+                if(typeof val == 'string')
+                {
+                    res += property + ':' + val+'<br>';
+                }
+                else
+                {
+                    res += property + ':' + JSON.stringify(val)+'<br>';
+                }
+            }
+
+            console.log('Callback for type ' + type + ' with response ' + res);
+        };
+
 
     </script>
 
